@@ -32,6 +32,17 @@ Laser.__doc__ = """Represents a laser.
      atom.delta)
 """
 
+Cavity = namedtuple("Cavity", "transition,q,g,kappa,delta")
+Cavity.__doc__ = """Represents a cavity mode.
+   :param transition: string with the name of the transition the laser couples
+     to.
+   :param q: mode polarization, +1/-1 for sigma plus/minus, 0 for pi.
+   :param g: cavity coupling constant in angular units.
+   :param kappa: cavity 
+   :param delta: cavity detuning from transition centre of gravity (c.f.
+     atom.delta)
+"""
+
 
 class LevelData:
     """Stored atomic structure information about a single level."""
